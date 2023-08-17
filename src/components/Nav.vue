@@ -11,15 +11,23 @@ import { RouterLink } from 'vue-router';
     <header>
         <nav>
             <h2>
-                <RouterLink to="/">
+                <RouterLink active-class="active" to="/">
                     Home
+                    <!-- active-class is a prop that is used to show the active class and style the active class -->
                 </RouterLink>
             </h2>
             <h2>
-                <RouterLink to="/about">
+                <RouterLink active-class="active" to="/about">
                     About
                 </RouterLink>
             </h2>
         </nav>
     </header>
 </template>
+<style scoped>
+.active{
+    font-weight: 900;
+    color: aqua;
+}
+
+</style>
