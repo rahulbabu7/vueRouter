@@ -1,5 +1,5 @@
 <script setup>
-import { useRoute } from 'vue-router'; //used to extract the id from the path
+import { useRoute, RouterView } from 'vue-router'; //used to extract the id from the path
 import cars from '../data/cars.json';
 const route = useRoute();
 
@@ -24,9 +24,10 @@ const car = cars.find(carz => carz.id === parseInt(route.params.id));
             </article>
         </section>
         <section>
-            <button>
-                Contact seller
-            </button>
+           <RouterView/> 
+           <!-- Checks any children routes associated with this car.vue 
+          it goes to /cars/id and then checks the child  routes because the parent is already in a  route
+        -->
         </section>
     </main>
 </template>
