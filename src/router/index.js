@@ -3,6 +3,7 @@ import { createRouter,createWebHistory } from "vue-router";
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Car from '../views/Car.vue';
+import Contact from '../views/Contact.vue';
 const router = createRouter({
  history:createWebHistory(import.meta.env.BASE_URL),
  routes : [
@@ -19,7 +20,14 @@ const router = createRouter({
     {
         path:'/cars/:id',   //: is used for dynamic path
         name:'car',
-        component:Car
+        component:Car,
+        children:[  //for setting the child componetn ie  /cars/id/contact
+            {
+               path:'/contact',
+               component:Contact
+               //since it is a child route it will we displayed in the same parent component page
+            }
+        ]
     }
  ]
 })

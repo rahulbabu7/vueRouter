@@ -3,31 +3,51 @@
         "id":1,
         "name": "Chevy",
         "price":"15000$",
-        "year":2015
+        "year":2015,
+        "contact":{
+            "dealer" : "Amal",
+            "number":9090909090
+        }
     },
     {
         "id":2,
         "name": "BMW",
         "price":"29000$",
-        "year":2011
+        "year":2011,
+        "contact":{
+            "dealer" : "Zayne",
+            "number":9090909090
+        }
     },
     {
         "id":3,
         "name": "AUDI",
         "price":"18000$",
-        "year":2010
+        "year":2010,
+        "contact":{
+            "dealer" : "Arav",
+            "number":9090909090
+        }
     },
     {
         "id":4,
         "name": "Lambo",
         "price":"19000$",
-        "year":2014
+        "year":2014,
+        "contact":{
+            "dealer" : "Amu",
+            "number":9090909090
+        }
     },
     {
         "id":5,
         "name": "Benz",
         "price":"34000$",
-        "year":2016
+        "year":2016,
+        "contact":{
+            "dealer" : "Arun",
+            "number":9090909090
+        }
     }
 
 ]
