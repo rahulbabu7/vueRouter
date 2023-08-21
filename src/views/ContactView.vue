@@ -8,6 +8,7 @@
             <h1>
                 Contact info
             </h1>
+            <p>{{ car }}</p>
         </section>
     </main>
 </template>
