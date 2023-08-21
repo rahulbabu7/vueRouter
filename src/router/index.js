@@ -24,6 +24,7 @@ const router = createRouter({
         children:[  //for setting the child componetn ie  /cars/id/contact
             {
                path:'contact',
+               name:'contact',
                component:ContactView
                //since it is a child route it will we displayed in the same parent component page
             }

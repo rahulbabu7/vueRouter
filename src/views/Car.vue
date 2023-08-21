@@ -1,12 +1,14 @@
 <script setup>
-import { useRoute, RouterView } from 'vue-router'; //used to extract the id from the path
+import { useRoute,useRouter, RouterView } from 'vue-router'; //used to extract the id from the path
 import cars from '../data/cars.json';
 const route = useRoute();
+
 //console.log(route.params)
 //For example, if your route configuration defines a route like /products/:productId, and you navigate to a URL like /products/123, the params object might look something like { productId: "123" }.
-
+const router = useRouter();  //for redirecting to the path
 const car = cars.find(carz => carz.id === parseInt(route.params.id));
 
+//  const carId = parseInt(route.params.id);  //another way of redirecting the route
 </script>
 
 <template>
@@ -15,17 +17,24 @@ const car = cars.find(carz => carz.id === parseInt(route.params.id));
             <h1>
                 car
             </h1>
-            <article>
+            <p>
                 {{ car.name }}
                 {{ car.year }}
                 {{ car.price }}
-            </article>
+                <button @click="router.push({ name: 'contact' }); ">
+                    Click me for contact
+                </button>
+                <!-- <button @click="router.push(`/cars/${carId}/contact`); ">
+                    Click me for contact
+                </button>
+                 another way of redirecting the route -->
+                <RouterView />
+            </p>
+             
         </section>
-        <section>
-           <RouterView/> 
+            
            <!-- Checks any children routes associated with this car.vue 
           it goes to /cars/id and then checks the child  routes because the parent is already in a  route
         -->
-        </section>
     </main>
 </template>
