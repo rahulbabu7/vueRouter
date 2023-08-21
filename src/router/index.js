@@ -3,7 +3,7 @@ import { createRouter,createWebHistory } from "vue-router";
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Car from '../views/Car.vue';
-import Contact from '../views/Contact.vue';
+import ContactView from '../views/ContactView.vue';
 const router = createRouter({
  history:createWebHistory(import.meta.env.BASE_URL),
  routes : [
@@ -23,8 +23,8 @@ const router = createRouter({
         component:Car,
         children:[  //for setting the child componetn ie  /cars/id/contact
             {
-               path:'/contact',
-               component:Contact
+               path:'contact',
+               component:ContactView
                //since it is a child route it will we displayed in the same parent component page
             }
         ]
