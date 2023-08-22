@@ -14,6 +14,10 @@ const router = createRouter({
         component :Home  
     },
     {
+      path:'/home',
+      redirect:'/'  //whenever /home comes redirect it to / route
+    },
+    {
         path:'/about',
         name:'about',
         component:About
