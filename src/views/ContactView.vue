@@ -11,7 +11,7 @@ const car = cars.find(carz => carz.id === parseInt(route.params.id));
 <template>
 
     <main>
-        <section>
+        <section v-if="car">
             <h1>
                 Contact info
             </h1>

@@ -3,6 +3,7 @@ import { createRouter,createWebHistory } from "vue-router";
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Car from '../views/Car.vue';
+import NotFound from '../views/404View.vue';
 import ContactView from '../views/ContactView.vue';
 const router = createRouter({
  history:createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +30,11 @@ const router = createRouter({
                //since it is a child route it will we displayed in the same parent component page
             }
         ]
+    },
+    {
+        path:'/:catchall(.*)*',  //catch all the paths that we are not defined
+        name:'Not Found',
+        component:NotFound
     }
  ]
 })
